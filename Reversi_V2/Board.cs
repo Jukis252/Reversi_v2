@@ -6,9 +6,6 @@ using System.Threading.Tasks;
 
 namespace Reversi_V2
 {
-    class Board
-    {
-
     public class Board
     {
         const int Rows = 8;
