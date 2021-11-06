@@ -1,0 +1,16 @@
+C:\Users\Admin\source\repos\Reversi_V2\Reversi_V2\bin\Debug\net5.0\Reversi_V2.exe
+C:\Users\Admin\source\repos\Reversi_V2\Reversi_V2\bin\Debug\net5.0\Reversi_V2.deps.json
+C:\Users\Admin\source\repos\Reversi_V2\Reversi_V2\bin\Debug\net5.0\Reversi_V2.runtimeconfig.json
+C:\Users\Admin\source\repos\Reversi_V2\Reversi_V2\bin\Debug\net5.0\Reversi_V2.runtimeconfig.dev.json
+C:\Users\Admin\source\repos\Reversi_V2\Reversi_V2\bin\Debug\net5.0\Reversi_V2.dll
+C:\Users\Admin\source\repos\Reversi_V2\Reversi_V2\bin\Debug\net5.0\ref\Reversi_V2.dll
+C:\Users\Admin\source\repos\Reversi_V2\Reversi_V2\bin\Debug\net5.0\Reversi_V2.pdb
+C:\Users\Admin\source\repos\Reversi_V2\Reversi_V2\obj\Debug\net5.0\Reversi_V2.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\Reversi_V2\Reversi_V2\obj\Debug\net5.0\Reversi_V2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\source\repos\Reversi_V2\Reversi_V2\obj\Debug\net5.0\Reversi_V2.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\Reversi_V2\Reversi_V2\obj\Debug\net5.0\Reversi_V2.AssemblyInfo.cs
+C:\Users\Admin\source\repos\Reversi_V2\Reversi_V2\obj\Debug\net5.0\Reversi_V2.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\Reversi_V2\Reversi_V2\obj\Debug\net5.0\Reversi_V2.dll
+C:\Users\Admin\source\repos\Reversi_V2\Reversi_V2\obj\Debug\net5.0\ref\Reversi_V2.dll
+C:\Users\Admin\source\repos\Reversi_V2\Reversi_V2\obj\Debug\net5.0\Reversi_V2.pdb
+C:\Users\Admin\source\repos\Reversi_V2\Reversi_V2\obj\Debug\net5.0\Reversi_V2.genruntimeconfig.cache
