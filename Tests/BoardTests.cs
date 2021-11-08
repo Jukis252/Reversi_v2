@@ -1,17 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using System.Threading;
-using System.Threading.Tasks;
 
-namespace Reversi_V2
+namespace ReversiTests
 {
-    public class Board
+    [TestClass]
+    public class BoardTests
     {
         const int Rows = 8;
         const int Cols = 8;
-        public char[,] CreateBoard()
+
+        [TestMethod]
+        public void CreateBoardTest()
         {
             char[,] board = new char[Rows,Cols];
             for(int i = 0; i<Rows; i++)
@@ -25,18 +25,17 @@ namespace Reversi_V2
                     board[4, 3] = 'w';
                     board[4, 4] = 'b';
             }
-
-            return board;
-
         }
-        public char[,] FillBoard(char[,] board)
+        [TestMethod]
+        public void FillBoardTest()
         {
-            CreateBoard();
-            return board;
+            CreateBoardTest();
         }
 
-        public void ShowBoard(char[,] board)
+        [TestMethod]
+        public void ShowBoardTest()
         {
+            char[,] board = new char[8,8];
             Console.Write(" ");
             for(int i=0;i<Rows;i++)
             {
@@ -54,13 +53,17 @@ namespace Reversi_V2
             }
         }
 
-        public bool updateBoardBlack(int row, int col,char[,] board)
+        [TestMethod]
+        public void updateBoardBlackTest()
         {
+            int row=7;
+            int col=7;
+            char[,] board = new char [8,8];
             if(board[row,col] == ' ')
             {
                 board[row,col] = 'b';
                 Console.WriteLine("Black works");
-                return true;
+                //return true;
 
             }
             else
@@ -68,35 +71,30 @@ namespace Reversi_V2
                 Console.WriteLine("Black error");
                 Console.WriteLine("Invalid move");
                 Thread.Sleep(5000);
-                return false;
+                //return false;
             }
         }
 
-        public bool updateBoardWhite(int row, int col,char[,] board)
+        [TestMethod]
+        public void updateBoardWhiteTest()
         {
+            int row=7;
+            int col=7;
+            char[,] board = new char [8,8];
             if(board[row,col] == ' ')
             {
-                board[row,col] = 'w';
+                board[row,col] = 'W';
                 Console.WriteLine("White works");
-                return true;
+                //return true;
+
             }
             else
             {
                 Console.WriteLine("White error");
                 Console.WriteLine("Invalid move");
                 Thread.Sleep(5000);
-                return false;
+                //return false;
             }
-        }
-
-        public void ChangeBlack(int row, int col,char[,] board)
-        {
-            board[row, col] = 'b';
-        }
-
-        public void ChangeWhite(int row, int col,char[,] board)
-        {
-            board[row,col] = 'w';
         }
 
     }

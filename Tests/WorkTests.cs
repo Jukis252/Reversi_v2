@@ -1,31 +1,36 @@
-﻿using System;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Reversi_V2;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Reversi_V2
+namespace ReversiTests
 {
-    class Work
+    [TestClass]
+    public class WorkTests
     {
         Players players = new Players();
         Board board = new Board();
         int row=0;
         int col=0;
-        public void Start()
+
+        [TestMethod]
+        public void StartTest()
         {
             char [,] newBoard = board.CreateBoard();
             int run = 1;
             while(run<60)
             {
-                Console.Clear();
+                
                 board.ShowBoard(newBoard);
                 if(run%2 == 0)
                 {
                     var dataW = players.WhitePlayer(row,col);
                     if(board.updateBoardWhite(dataW.Item1 ,dataW.Item2,newBoard) == true)
                     {
-                        ReverseWhite(dataW.Item1,dataW.Item2,newBoard);
+                        ReverseWhiteTest();
                         run++;
                     }
                 }
@@ -34,7 +39,7 @@ namespace Reversi_V2
                     var dataB = players.BlackPlayer(row,col);
                     if(board.updateBoardBlack(dataB.Item1 ,dataB.Item2 ,newBoard) == true)
                     {
-                        ReverseBlack(dataB.Item1,dataB.Item2,newBoard);
+                        ReverseBlackTest();
                         run++;
                     }
                 }
@@ -42,12 +47,16 @@ namespace Reversi_V2
                 {
                     Console.WriteLine("Unexpected error");
                 }
-
+                break;
             }
         }
 
-        public void ReverseBlack(int row, int col,char [,] boardB)
+        [TestMethod]
+        public void ReverseBlackTest()
         {
+            int row = 7;
+            int col = 7;
+            char [,] boardB = new char [8,8];
             if(row > 2)
             {
                 if(boardB[row-2,col] == 'b')
@@ -83,8 +92,12 @@ namespace Reversi_V2
 
         }
 
-        public void ReverseWhite(int row, int col,char [,] boardW)
+        [TestMethod]
+        public void ReverseWhiteTest()
         {
+            int row = 7;
+            int col = 7;
+            char [,] boardW = new char [8,8];
             if(row > 2)
             {
                 if(boardW[row-2,col] == 'w')
