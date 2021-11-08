@@ -7,6 +7,7 @@ namespace Reversi_V2
         static void Main(string[] args)
         {
             Work work = new Work();
+            work.Start();
         }
     }
 }

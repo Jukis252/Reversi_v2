@@ -8,22 +8,24 @@ namespace Reversi_V2
 {
     public class Players
     {
-        int row =0;
-        int col = 0;
-        public void WhitePlayer(int row, int col)
+        public (int,int) WhitePlayer(int row, int col)
         {
+            Console.WriteLine("White players turn");
             Console.WriteLine("Input row: ");
             row = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Input column: ");
             col = Convert.ToInt32(Console.ReadLine());
+            return (row, col);
             
         }
-        public void BlackPlayer(int row, int col)
+        public (int,int) BlackPlayer(int row, int col)
         {
+            Console.WriteLine("Black players turn");
             Console.WriteLine("Input row: ");
             row = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Input column: ");
             col = Convert.ToInt32(Console.ReadLine());
+            return (row, col);
         }
     }
 }
