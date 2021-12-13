@@ -1,10 +1,8 @@
-﻿using System;
-
-namespace Reversi_V2
+﻿namespace Reversi_V2
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main()
         {
             Work work = new Work();
             work.Start();

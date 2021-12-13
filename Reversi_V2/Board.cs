@@ -1,16 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace Reversi_V2
 {
     public class Board
     {
-        const int Rows = 8;
-        const int Cols = 8;
+        private const int Rows = 8;
+        private const int Cols = 8;
         public char[,] CreateBoard()
         {
             char[,] board = new char[Rows,Cols];
@@ -54,35 +50,35 @@ namespace Reversi_V2
             }
         }
 
-        public bool updateBoardBlack(int row, int col,char[,] board)
+        public bool UpdateBoardBlack(int row, int col,char[,] board)
         {
             if(board[row,col] == ' ')
             {
                 board[row,col] = 'b';
-                Console.WriteLine("Black works");
+                //Console.WriteLine("Black works");
                 return true;
 
             }
             else
             {
-                Console.WriteLine("Black error");
+                //Console.WriteLine("Black error");
                 Console.WriteLine("Invalid move");
                 Thread.Sleep(5000);
                 return false;
             }
         }
 
-        public bool updateBoardWhite(int row, int col,char[,] board)
+        public bool UpdateBoardWhite(int row, int col,char[,] board)
         {
             if(board[row,col] == ' ')
             {
                 board[row,col] = 'w';
-                Console.WriteLine("White works");
+               // Console.WriteLine("White works");
                 return true;
             }
             else
             {
-                Console.WriteLine("White error");
+               // Console.WriteLine("White error");
                 Console.WriteLine("Invalid move");
                 Thread.Sleep(5000);
                 return false;
@@ -94,9 +90,23 @@ namespace Reversi_V2
             board[row, col] = 'b';
         }
 
+        public void ChangeBlack(int row, int col,char[,] board, int turn)
+        {
+            board[row, col] = 'b';
+            Console.WriteLine("Current turn:" + turn);
+            Thread.Sleep(5000);
+        }
+
         public void ChangeWhite(int row, int col,char[,] board)
         {
             board[row,col] = 'w';
+        }
+
+        public void ChangeWhite(int row, int col,char[,] board, int turn)
+        {
+            board[row, col] = 'w';
+            Console.WriteLine("Current turn:" + turn);
+            Thread.Sleep(5000);
         }
 
     }
