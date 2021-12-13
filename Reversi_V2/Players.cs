@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Reversi_V2
 {
-    public class Players
+    internal abstract class Players : Board
     {
         public (int,int) WhitePlayer(int row, int col)
         {
@@ -27,5 +23,6 @@ namespace Reversi_V2
             col = Convert.ToInt32(Console.ReadLine());
             return (row, col);
         }
+
     }
 }
